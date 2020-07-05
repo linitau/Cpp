@@ -1,0 +1,19 @@
+//交换算法 使用引用方式
+#include<iostream>
+using namespace std;
+
+void swap(int &c, int &d);
+int main()
+{
+	int a = 10, b = 20;
+	swap(a, b);
+	cout << a << " " << b << endl;
+	return 0;
+}
+void swap(int &c, int &d)
+{
+	int tmp;
+	tmp = c;
+	c = d;
+	d = tmp;
+}
