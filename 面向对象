@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+class Circle
+{
+public:
+	int m_r;  
+	void setR(int r)
+	{
+		m_r = r;
+	}
+	int getR()
+	{
+		return m_r;
+	}
+};
+int main()
+{
+	Circle my_Circle;
+	cout << "请输入圆的半径" << endl;
+	int r;
+	cin >> r;
+	my_Circle.setR(r);
+	int a;
+	a=my_Circle.getR();
+	cout << a << endl;
+	return 0;
+}
