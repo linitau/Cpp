@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+//顺序查找
+//缺点：速度慢
+
+int SequentialSearch(int *a, const int n, const int x);
+int main()
+{
+	int m[] = { 2,6,1,7,23,75,12,53 };
+	int res;
+	res = SequentialSearch(m, 8, 53);
+	if (res == -1)
+	{
+		cout << "没有找到" << endl;
+	}
+	else
+		cout << "在m[" << res << "]里找到" << endl;
+
+	return 0;
+}
+int SequentialSearch(int *a, const int n, const int x)
+{
+	int i;
+	for (i = 0; i < n; i++)
+	{
+		if (a[i] == x)
+		{
+			return i;
+		}
+		if (i == n)
+		{
+			return -1;
+		}
+	}
+}
