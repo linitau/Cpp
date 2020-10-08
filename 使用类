@@ -20,7 +20,7 @@ public:
 
 int main()
 {
-	class DateClass my_date;
+	DateClass my_date;
 	int year, month, day;
 	std::cout << "Please enter the date:\n";
 	std::cin >> year;
