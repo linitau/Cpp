@@ -1,0 +1,32 @@
+#include<iostream>
+class DateClass
+{
+private:
+	int m_month;
+	int m_year;
+	int m_day;
+public:
+	void set_date(int& year, int& month, int& day)
+	{
+		m_year = year;
+		m_month = month;
+		m_day = day;
+	}
+	void print_date()
+	{
+		std::cout << m_year << "年" << m_month << "月" << m_day << "日\n";
+	}
+};
+
+int main()
+{
+	class DateClass my_date;
+	int year, month, day;
+	std::cout << "Please enter the date:\n";
+	std::cin >> year;
+	std::cin >> month;
+	std::cin >> day;
+	my_date.set_date(year, month, day);
+	my_date.print_date();
+	return 0;
+}
