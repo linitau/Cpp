@@ -6,7 +6,7 @@ private:
 	int m_year;
 	int m_day;
 public:
-	void set_date(int& year, int& month, int& day)
+	void set_date(int& year, int& month, int& day)  //使用引用进行传参
 	{
 		m_year = year;
 		m_month = month;
@@ -16,11 +16,18 @@ public:
 	{
 		std::cout << m_year << "年" << m_month << "月" << m_day << "日\n";
 	}
+	void copy_type(const DateClass &d)
+	{
+		m_month = d.m_month;
+		m_day = d.m_day;
+		m_year = d.m_year;
+	}
 };
 
 int main()
 {
 	DateClass my_date;
+	DateClass new_date;
 	int year, month, day;
 	std::cout << "Please enter the date:\n";
 	std::cin >> year;
@@ -28,5 +35,7 @@ int main()
 	std::cin >> day;
 	my_date.set_date(year, month, day);
 	my_date.print_date();
+	new_date.copy_type(my_date);
+	new_date.print_date();
 	return 0;
 }
