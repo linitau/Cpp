@@ -1,0 +1,19 @@
+#include<iostream>
+#include<iterator>
+enum StudentsName  //用枚举量来表示数组索引，有具体的意义
+{
+	kyle,
+	rita,
+	aldrich,
+	lily,
+	lucy,
+	number
+};
+
+int main()
+{
+	int testscore[number]{ 90,89,70,60,86 };
+	std::cout << testscore[kyle] << '\n';
+	std::cout << std::size(testscore);
+	return 0;
+}
