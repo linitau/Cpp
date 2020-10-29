@@ -1,0 +1,24 @@
+#include<iostream>
+class STU
+{
+public:
+	int getnum() const //表示不可修改任何成员变量的值
+	{ 
+		return number; 
+	}
+	STU():number{10}
+	{
+		std::cout << "构造函数" << std::endl;
+	}
+private:
+	int number;
+};
+int main()
+{
+	STU stu;
+	int number;
+	number = stu.getnum();
+	std::cout << number << std::endl;
+
+	return 0;
+}
