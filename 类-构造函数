@@ -1,0 +1,38 @@
+#include<iostream>
+void display(const double& a)
+{
+	std::cout << a << std::endl;
+	std::cout << "这是一个常引用函数" << std::endl;
+}
+class Date
+{
+public:
+	Date() :year{ 2020 }, month{ 10 }, day{30}
+	{
+		std::cout << "默认构造函数，使用列表初始化成员变量" << std::endl;
+	}
+	Date(int a, int b, int c)
+	{
+		year = a;
+		month = b;
+		day = c;
+		std::cout << a << "年" << b << "月" << c << "日" << std::endl;
+	}
+	void test();
+private:
+	int year;
+	int month;
+	int day;
+};
+void Date::test()  //成员函数的实现需要加上返回值
+{
+	std::cout << "this is a test function" << std::endl;
+}
+int main()
+{
+	int num = 10;
+	Date date;
+	date.test();
+	display(num);
+	return 0;
+}
