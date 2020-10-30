@@ -11,11 +11,8 @@ public:
 	{
 		std::cout << "默认构造函数，使用列表初始化成员变量" << std::endl;
 	}
-	Date(int a, int b, int c)
+	Date(int a, int b, int c):year(a),month(b),day(c)
 	{
-		year = a;
-		month = b;
-		day = c;
 		std::cout << a << "年" << b << "月" << c << "日" << std::endl;
 	}
 	void test();
@@ -27,6 +24,7 @@ private:
 void Date::test()  //成员函数的实现需要加上返回值
 {
 	std::cout << "this is a test function" << std::endl;
+	std::cout << year << std::endl;
 }
 int main()
 {
