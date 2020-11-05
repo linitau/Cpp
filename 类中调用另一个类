@@ -1,0 +1,44 @@
+#include<iostream>
+class A
+{
+public:
+    int get_num();
+    void get_out() const;
+private:
+    int num;
+};
+
+int A::get_num()
+{
+    std::cout<<"please input a number under 10:\n";
+    std::cin>>num;
+    return num;
+}
+void A::get_out() const
+{
+    std::cout<<num<<std::endl;
+
+}
+
+class B
+{
+public:
+    void set()
+    {
+        a.get_num();
+    }
+    void out()
+    {
+        a.get_out();
+    }
+private:
+    A a;
+};
+int main()
+{
+    B b;
+    b.set();
+    b.out();
+
+    return 0;
+}
