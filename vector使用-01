@@ -1,0 +1,13 @@
+#include<iostream>
+#include<vector>
+
+int main()
+{
+    std::vector<int> my_vec={1,2,3,4,5,6,7,8,9};
+    for (auto i=0;i<my_vec.size();i++)
+    {
+	std::cout<<my_vec[i]<<std::endl;
+    }
+    std::cout<<my_vec.front()<<std::endl;//获取头部元素
+    return 0;
+}
