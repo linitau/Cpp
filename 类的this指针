@@ -1,0 +1,26 @@
+#include<iostream>
+class TEST
+{
+private:
+    int name;
+    int age;
+public:
+    void set_age()
+    {
+        std::cout<<"please enter the age: "<<std::endl;
+	std::cin>>this->age;
+    }
+    void show() const
+    {
+        std::cout<<this->age<<std::endl;
+    }
+};
+
+
+int main()
+{
+    TEST test;
+    test.set_age();
+    test.show();
+    return 0;
+}
