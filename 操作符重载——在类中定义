@@ -1,0 +1,35 @@
+#include<iostream>
+
+class person
+{
+private:
+	int age;
+public:
+	person(int age)  //构造函数重载
+	{
+		this->age = age;//使用this指针以区分形参age
+	}
+
+	bool operator==(const person& ps)//操作符重载
+	{
+		if (this->age == ps.age)
+		{
+			return true;
+		}
+		return false;
+	}
+};
+int main()
+{
+	person p1(10);
+	person p2(20);
+	if (p1 == p2)//p1调用operator==函数
+	{
+		std::cout << "p1 is equal to p2" << std::endl;
+	}
+	else
+	{
+		std::cout << "p1 is not equal to p2" << std::endl;
+	}
+	return 0;
+}
