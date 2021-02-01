@@ -4,34 +4,32 @@ class A
 {
 public:
     int a;
-	A()
-	{
-	    a = 10;
-	}
-
+    A()
+    {
+        a = 10; 
+    }
 };
 class B
 {
 public: 
     int b;
-	B()
-	{
-	    b = 20;
-	 	std::cout << "constructor\n";
-	}
+    B()
+    {
+        b = 20;
+        std::cout << "constructor\n";
+    }
 };
 class C:public A ,public B
 {
 public:
     C()
-	{
-	    std::cout << "C\n";
-	}
+    {
+        std::cout << "C\n";
+    }
 };
 int main()
 {
     C c;
-	std::cout << c.a << c.b << "\n";
-
-	return 0;
+    std::cout << c.a << c.b << "\n";
+    return 0;
 }
