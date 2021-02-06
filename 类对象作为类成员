@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+class Phone
+{
+public:
+	Phone():m_name("iPhone")
+	{
+		std::cout << "phone constructor\n";
+	}
+	string m_name;
+	void show_name()
+	{
+		std::cout << "phone name: " << m_name << "\n";
+	}
+};
+class Person
+{
+public:
+	int m_a;
+	Person(int a):m_a(a)
+	{
+	     std::cout << "person constructor\n";
+	}
+	Phone my_phone;
+};
+int main()
+{
+	Person p(10);
+	p.my_phone.show_name();
+	return 0;
+}
